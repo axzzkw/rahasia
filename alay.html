@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jumpscare Demo</title>
+  <style>
+    body {
+      text-align: center;
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    #jumpscare {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: black;
+      z-index: 9999;
+    }
+    #jumpscare img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <h1>JANGAN DI PENCET NANTI MENYESAL</h1>
+  <button onclick="triggerJumpscare()">CILUKKK....BAAAAA.......</button>
+
+  <div id="jumpscare">
+    <img src="https://files.catbox.moe/yu8tvq.jpg" alt="Jumpscare">
+    <audio id="scream" src="https://www.soundjay.com/human/sounds/scream-01.mp3"></audio>
+  </div>
+
+  <script>
+    function triggerJumpscare() {
+      document.getElementById('jumpscare').style.display = 'block';
+      document.getElementById('scream').play();
+    }
+  </script>
+</body>
+</html>
